@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <!-- property name="connection.driver_class">com.mysql.jdbc.Driver</property -->
+    <property name="connection.url">jdbc:mysql://localhost:3306/fjwp</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">bHav@101</property>
+    
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="hbm2ddl.auto">create</property>
+    
+    <!-- Mapping the entity classes -->
+    <mapping class="com.bank.entity.Customer"/>
+    <mapping class="com.bank.entity.Branch"/>
+    <mapping class="com.bank.entity.Account"/>
+    <mapping class="com.bank.entity.Transaction"/>
+    <mapping class="com.bank.entity.Loan"/>
+    
+  </session-factory>
+</hibernate-configuration>
